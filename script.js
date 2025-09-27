@@ -28,8 +28,7 @@
 // ===========|Example 02|==========
 class Person {
   constructor(name){
-    console.log("Enter Parents");
-    
+    console.log("Enter Parents");    
     this.name = name
   }
     eat() {
@@ -43,24 +42,23 @@ class Person {
 }
 
 class Engineer extends Person {
-    constructor(branch){
-        console.log("Enter Child");
-        
-        super();
-        this.branch = branch;
-        console.log("Exit");
-        
+    constructor(name){
+        console.log("Enter Child");        
+        super(name);
+        // this.branch = branch;
+        console.log("Exit");       
     }
     eat() {
         console.log("All halah Foods need");
 
     };
     work(){
+        super.eat()
         console.log("Creative think");
         
     };
 }
 
-let EngObj = new Person("CSE")
+let EngObj = new Engineer("Alu")
 // EngObj.name()
-console.log(EngObj);
+// console.log(EngObj);
